@@ -29,8 +29,8 @@ jobs:
       uses: actions/cache@v4
       with:
         path: ${{ env.CCACHE_DIR }}
-        key: ccache-jhb-${{ steps.timestamp.outputs.formattedTime }}
-        restore-keys: ccache-jhb-
+        key: ccache-jhb-${{ matrix.platform.name }}-${{ steps.timestamp.outputs.formattedTime }}
+        restore-keys: ccache-jhb-${{ matrix.platform.name }}-
     - name: build
       run: |
         git clone https://gitlab.com/dehesselle/jhb
