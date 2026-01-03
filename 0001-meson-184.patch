@@ -1,0 +1,13 @@
+diff --git a/etc/jhb.conf.d/jhbuild.sh b/etc/jhb.conf.d/jhbuild.sh
+index 838c03b..1cb61c6 100644
+--- a/etc/jhb.conf.d/jhbuild.sh
++++ b/etc/jhb.conf.d/jhbuild.sh
+@@ -20,7 +20,7 @@ export JHBUILDRC=${JHBUILDRC:-$ETC_DIR/jhbuildrc}
+ export JHBUILDRC_CUSTOM=${JHBUILDRC_CUSTOM:-$JHBUILDRC-custom}
+ 
+ JHBUILD_REQUIREMENTS_PIP=(
+-  "meson==1.8.2"
++  "meson==1.8.4"
+   "ninja==1.11.1.4"
+   "setuptools==80.9.0"
+ )
