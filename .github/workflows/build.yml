@@ -31,7 +31,7 @@ jobs:
        cd jhb
        git checkout $(git tag | grep "^v" | sort -V | tail -1)
        git submodule update --init --recursive
-       sed -i 's/meson==1.8.2/meson==1.8.4/ etc/jhb.conf.d/jhbuild.sh
+       sed -i 's/meson==1.8.2/meson==1.8.4/' etc/jhb.conf.d/jhbuild.sh
        export MACOSX_DEPLOYMENT_TARGET=11.0
        export FORCE_BUILD_FROM_SOURCE=true
        export VERSION="1.3+meson184"
