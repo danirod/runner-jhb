@@ -47,5 +47,5 @@ jobs:
     - name: upload
       uses: actions/upload-artifact@v4
       with:
-        name: jhb
-        path: jhb/jhb*.tar.xz
+        name: jhb-{{ matrix.platform.name }}
+        path: jhb*.tar.xz
