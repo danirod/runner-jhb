@@ -1,23 +1,13 @@
 diff --git a/etc/modulesets/jhb/gtk-osx-bootstrap.modules b/etc/modulesets/jhb/gtk-osx-bootstrap.modules
-index 140a570..de06172 100644
+index 140a570..bd57923 100644
 --- a/etc/modulesets/jhb/gtk-osx-bootstrap.modules
 +++ b/etc/modulesets/jhb/gtk-osx-bootstrap.modules
-@@ -40,11 +40,14 @@
-   </autotools>
+@@ -24,7 +24,7 @@
+               href="https://github.com/"
+               type="tarball" />
+   <repository name="nasm"
+-              href="https://www.nasm.us/pub/nasm/releasebuilds/"
++              href="https://mirror.dotsrc.org/mirrors/mirrors/pub/kde-applicationdata/craft/3rdparty/nasm/"
+               type="tarball" />
    <!---->
-   <autotools id="nasm"
--             autogen-sh="configure">
--    <branch module="2.16.03/nasm-2.16.03.tar.xz"
-+             autogen-sh="autogen.sh"
-+             autogen-template="./%(autogen-sh)s &amp;&amp; %(srcdir)s/configure --prefix=%(prefix)s %(autogenargs)s"
-+             supports-non-srcdir-builds="no">
-+    <branch module="netwide-assembler/nasm/archive/refs/tags/nasm-2.16.03.tar.gz"
-+            checkoutdir="nasm-nasm-2.16.03"
-             version="2.16.03"
--            hash="sha256:1412a1c760bbd05db026b6c0d1657affd6631cd0a63cddb6f73cc6d4aa616148"
--            repo="nasm" />
-+            hash="sha256:e525fa6fdc3df33cec6b499111f44afa78ce50bf260158580dcf014015a21ba9"
-+            repo="github" />
-   </autotools>
-   <!---->
-   <if condition-unset="noturbojpeg">
+   <autotools id="libpng"
